@@ -1,7 +1,49 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Munch</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+        <script src = "test.js"></script>
+    </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Stuff</p>
+   
+    <div class = "container">
+        <div class = "example">
+            <h1>Munch</h1>
+            <p class = "lead">onomnomnom</p>
+             <form id="form">
+                Calories: <input name = "cal" type="text" size ="20">
+            </form>
+            <p id = "demo"></p>
+            <button type = "button" class = "btn btn-default" onclick = "outputcal()">Submit</button>
+        </div>
+        <hr>
+        <div class="progress">
+            <div id = "prog" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+            <span class="sr-only">0% Complete (success)</span>
+            </div>
+        </div>
+    </div>
+
+     <script>
+        function outputcal(){
+            var x, y;
+            x = document.getElementById("form");
+            y = x.elements["cal"].value;
+            //document.getElementById("demo").innerHTML=(y);
+            
+            var value = 100;
+            $("#prog")
+            .css("width", y +"%")
+            .attr("aria-valuenow",value)
+            //.text(value+"%");
+        }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>
