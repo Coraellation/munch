@@ -4,25 +4,68 @@
         <title>Munch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href = "style.css"></link>
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     </head>
 <body>
     <div class = "container" ng-app="" >
-        <div class = "example">
+        <div id = "section">
             <h1>Munch</h1>
             <p class = "lead">onomnomnom</p>
-             <form id="form">
-                Calories: <input name = "cal" type="text" size ="20" ng-model="cal_val">
-            </form>
-            <p id = "demo"></p>
-        </div>
-        <hr>
-        <div class="progress">
-            <div id = "prog" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{cal_val}}%">
-            <span class="sr-only">0% Complete (success)</span>
+            
+             <ul class="nav nav-tabs">
+                <li class="nav active"><a href="#A" data-toggle="tab">Metric</a></li>
+                <li class="nav"><a href="#B" data-toggle="tab">Standard</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="metric">
+                    <form id="heightForm">
+                        Height: <input name = "height" type="text" size ="20" ng-model="cal_val">
+                    </form>
+                    <form id="weightForm">
+                        Weight: <input name = "weight" type="text" size ="20">
+                    </form>                    
+                
+                </div>
+                <div class="tab-pane fade" id="standar">
+                    <form id="heightForm">
+                        Height: <input name = "height" type="text" size ="20">
+                    </form>
+                    
+                    <form id="weightForm">
+                        Weight: <input name = "weight" type="text" size ="20">
+                    </form>
+                    
+                </div>
+            </div>
+
+            
+            
+            <p id = "demo">BMI</p>
+            <button type = "button" class = "btn btn-default" onclick = "calcbmi()">BMI</button>
+            
+            <hr>
+            <div class="progress">
+                <div id = "prog" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{cal_val}}%">
+                <span class="sr-only">0% Complete (success)</span>
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        function calcbmi(){
+            var x = document.getElementById("heightForm");
+            var height = x.elements["height"].value;
+            var y = document.getElementById("weightForm");
+            var weight = y.elements["weight"].value;
+            var bmi = height/weight;
+            document.getElementById("demo").innerHTML=(bmi);
+        }
+    </script> 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>

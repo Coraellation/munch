@@ -5,3 +5,10 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+#section{
+    width:650px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
