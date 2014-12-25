@@ -1,14 +1,32 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
+    background-color: #212121;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+#index h1 {
+    color: #d9534f;
+    font-family: 'Lobster', cursive;
+    font-size: 72px;
+    text-align: center;
+}
+
+#index p{
+    color: #FFFFFF;
+    text-align: center;
+}
+#form-tabs{
+    padding-top:50px;
 }
 
 #section{
-    width:650px;
+    width:550px;
     margin-left: auto;
     margin-right: auto;
-    
 }
+
+/*
+#forms{
+    width:250px;
+}
+
+*/
