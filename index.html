@@ -10,24 +10,36 @@
 
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     </head>
+
 <body id = "index">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-5">BMI Calculator</div>
+        <div class="col-md-2">Tools for Health</div>
+        <div class="col-md-2"></div>
+    </div>
+    <hr id = "infoBar">
+    <div class = "container-fluid">
+    </div>
     <div class = "container" ng-app="" >
         <div id = "section">
             <h1>Munch</h1>
             <p class = "lead">Eat healthy. Live healthy.</p>
             
             <div id = "form-tabs">
-            <ul class="nav nav-tabs">
-                <li class="nav active"><a href="#metric" data-toggle="tab">Metric</a></li>
-                <li class="nav"><a href="#standard" data-toggle="tab">Standard</a></li>
-            </ul>
+            <div class="span12 text-center">
+                <ul class="nav nav-pills center-pills">
+                    <li class="nav active"><a href="#metric" data-toggle="tab">Metric</a></li>
+                    <li class="nav"><a href="#standard" data-toggle="tab">Standard</a></li>
+                </ul>
+            </div>
             <br>
             
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="metric">
                     <form id ="bmiForm">
                     <div id = "forms">
-                        <div id = "heightt" class="input-group">
+                        <div class="input-group">
                             <input name = "height" 
                                    type = "text" 
                                    class = "form-control" 

@@ -1,5 +1,13 @@
+.row{
+    color:#586A6E;
+}
+
+hr{
+    border-color: #586A6E;
+}
+
 body {
-    padding-top: 50px;
+    padding-top: 20px;
     background-color: #212121;
 }
 
@@ -18,11 +26,16 @@ body {
     padding-top:50px;
 }
 
+.center-pills { 
+    display: inline-block; 
+}
+
 #section{
     width:550px;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 /*
 #forms{
