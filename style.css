@@ -17,7 +17,11 @@ body {
     font-size: 72px;
     text-align: center;
 }
-
+/*
+#index h2{
+    color: white;
+}
+*/
 #index p{
     color: #FFFFFF;
     text-align: center;

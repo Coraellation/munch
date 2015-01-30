@@ -7,6 +7,7 @@
         <link rel="stylesheet" href = "style.css"></link>
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+        <script type ="text/javascript" src = "bmi.js"></script>
     </head>
 
 <body id = "index">
@@ -99,13 +100,10 @@
                 </div>
             </div>
 
-            <p id = "bmiOut"></p>
-
             <button type = "button" 
                     class = "btn btn-default" 
                     onclick = "calcbmi()">BMI</button>
             </div>
-
             <hr>
             <div class="progress">
                 <div id = "prog" 
@@ -118,19 +116,16 @@
                 <span class="sr-only">0% Complete (success)</span>
                 </div>
             </div>
+            
+            <p id = "bmiOut"></p>
+            <h2>Additional Notes about BMI</h2>
+            <p>BMI is just one indicator of potential health risks associated with being overweight or obese. Although BMI correlates with body fat, it is important to note that BMI does not directly measure body fat or body fat distribution. For instance, some atheletes may have a BMI that identifies them as overweight, but they may not have excess body fat.</p>
+            <h2>Other Important Measurements</h2>
+            <p>Additional methods of calculating body fat and distribution include waist-to-hip circumference ratios, skinfold thickness, and technologies such as ultrasound and MRI.</p>
+            
         </div>
     </div>
    
-    <script>
-        function calcbmi(){
-            var a = document.getElementById("bmiForm");
-            var height = a.elements["height"].value;
-            var weight = a.elements["weight"].value;
-            var bmi = height/weight;
-            document.getElementById("bmiOut").innerHTML=(bmi);
-            
-        }
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="jquery.typer.js"></script>
         <script>
